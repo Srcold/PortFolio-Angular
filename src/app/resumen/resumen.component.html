@@ -1,0 +1,131 @@
+<section class="content" id="about">
+  <div class="block-content">
+      <h3 class="block-title">Perfil</h3>
+      <h3 class="subheading">¡Hola! Soy Martín Zambruno <strong>Programador BackEnd/FrontEnd</strong></h3>
+      <p>Web Jr con más de 2 años de experiencia, como freelancer
+        especializado en desarrollo front end y back end. Experimentado con todas las
+         etapas de la ciclo de desarrollo para proyectos web dinámicos. Tener un conocimiento
+         profundo incluyendo HTML5 avanzado, CSS, CSS3, Java, JavaScript, JQuery, Angular JS.
+         Fuertes antecedentes en gestión y liderazgo.</p>
+      <div class="info-list row">
+          <div class="col-sm-6"><span>Nombre : </span> Martin Zambruno</div>
+          <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Marzo 26, 1998 </div>
+          <div class="col-sm-6"><span>Dirección : </span> Argentina, Santa fe, Rosario.</div>
+          <div class="col-sm-6"><span>Email : </span> zambrunomartin@gmail.com</div>
+          <div class="col-sm-6"><span>Telefono : </span> + 54 341 654 7779</div>
+          <div class="col-sm-6"><span>Interes : </span> Freelance, Full-Time</div>
+      </div>
+  </div>
+  <div class="block-content">
+      <h3 class="block-title">Profesional</h3>
+      <div *ngFor="let profex of cv.profesional">
+        <label class="progress-bar-label">{{ profex.Nombre }}</label>
+        <div class="progress">
+            <div [style.width.%]=profex.Valor class="progress-bar" role="progressbar" attr.aria-valuenow="{{ profex.Valor }}" aria-valuemin="0" aria-valuemax="100">
+                <span>{{ profex.Valor }}%</span>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="block-content">
+      <h3 class="block-title">Experiencia</h3>
+      <div class="timeline experience">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="exp-holder">
+                      <div *ngFor="let expex of cv.experiencia">
+                        <div class="exp">
+                            <div class="hgroup">
+                                <h4><span>{{ expex.Empresa }}</span> - {{ expex.Cargo }}</h4>
+                                <h5> {{ expex.Fecha }} </h5>
+                            </div>
+                            <p>{{ expex.Descripcion }}</p>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="block-content">
+      <h3 class="block-title">Educación</h3>
+      <div class="timeline education">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="exp-holder">
+                    <div *ngFor="let edux of cv.educacion">
+                      <div class="exp">
+                          <div class="hgroup">
+                              <h4>{{ edux.Nombre }} | <a href="{{ edux.Url }}" target="_blank"><span>Ver Certificado</span></a></h4>
+                              <h5>{{ edux.Fecha }}</h5>
+                          </div>
+                          <p>{{ edux.Descripcion }}</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="block-content">
+      <h3 class="block-title">Servicios</h3>
+      <div class="row">
+          <div class="col-md-4 col-sm-6 service">
+              <div class="service-icon">
+                  <i class="ion-laptop"></i>
+              </div>
+              <h4>Desarrollo Web</h4>
+              <p>Amplios conocimientos en diseño, desarrollo web y tecnologías tanto BACK-END como FRONT-END</p>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+ <!--  <div class="block-content">
+      <h3 class="block-title">Awards</h3>
+      <div class="row">
+          <div class="col-md-3 col-sm-6 awards">
+              <img src="assets\images\awards\1.jpeg" alt="">
+          </div>
+          <div class="col-md-3 col-sm-6 awards">
+              <img src="assets\images\awards\2.jpeg" alt="">
+          </div>
+          <div class="col-md-3 col-sm-6 awards">
+              <img src="assets\images\awards\3.jpeg" alt="">
+          </div>
+          <div class="col-md-3 col-sm-6 awards">
+              <img src="assets\images\awards\4.jpeg" alt="">
+          </div>
+      </div>
+  </div> -->
+  <a class="btn lowercase">Zambrunomartin@gmail.com</a>
+  <div class="block-content">
+      <h3 class="block-title">Testimonios</h3>
+      <div class="row">
+          <div id="liontestimonial" class="owl-carousel owl-theme">
+              <div *ngFor="let testix of cv.testimonio">
+                <div class="item testimonials">
+                    <img src="assets\images\testimonials\1.jpeg" alt="">
+                    <blockquote>{{ testix.Descripcion }}
+                        <p class="quote"><span>{{ testix.Nombre }}</span> - {{ testix.Cargo }}</p>
+                    </blockquote>
+                </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12 btn-email">
+      </div>
+  </div>
+</section>
